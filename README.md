@@ -16,8 +16,9 @@ Kortin gerberit on pcb-kansion alla, ymmärtääkseni niillä saa tilattua suora
 Sirun ohjelmointirajapinta on UPDI. Se on siitä näppärä, että se on käytännössä sarjaporttiprotokolla, mutta yhdellä pinnillä. Toisin sanottuna on ohjelmia joilla sirun kanssa voi jutella standardilla sarjaportilla, esim. Raspberry pin sarjaporttipinneillä, kunhan kytkee TX ja RX väliin diodin (saadaan yhdestä pinnistä kaksisuuntaista kommunikointia).
 Käytin Microchipin virallista(?) Python-pohjaista `pymcuprog`: https://github.com/microchip-pic-avr-tools/pymcuprog
 Se on erittäin helppokäyttöinen, kunhan muistaa kirjoittaessa laittaa mukaan flagin `--erase`, eli
-
-`pymcuprog write --erase -d atmega808 -t uart -u /dev/ttyAMA0 -c 115200 -f ulostulo.hex`
+```
+pymcuprog write --erase -d atmega808 -t uart -u /dev/ttyAMA0 -c 115200 -f ulostulo.hex
+```
 
 Käytin vähän turhan monta tuntia debuggaamiseen kun koodi näytti kääntyvän ja siru ohjelmoituvan, mutta mitään ei näkynyt skoopissa...
 Kytkentäkaavio on esitetty alla.
@@ -41,4 +42,4 @@ Katso Makefilen sisältä yksityiskohdat, ja tarkista että kansiot ja avr-gcc-k
 Bonuksena mukana on send-vaihtoehto, eli `make send` kääntää ja lähettää käännetyn koodin sirulle.
 Jos koodi toimii, skoopilta kun katsoo kahden vierekkäisen pinnin signaalia niin pitäisi näyttää suunnilleen tältä
 
-<img src="img/kytkenta_raspi.png" width="700"></img>
+<img src="img/skooppi.png" width="700"></img>
