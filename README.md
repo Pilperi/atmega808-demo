@@ -38,6 +38,7 @@ Kunhan on `avr-gcc` tarpeeksi uutena versiona asennettuna, pitäisi `make` hoita
 - Kiskoo Microchipin sivuilta Atmega808 määritykset (device-spec, io-headerit ymv)
 - Tuuppaa speksitiedostot paikalleen GCC:n librakansioon
 - Kääntää koodin käyttäen include-kansion sisältöä tukena
+
 Katso Makefilen sisältä yksityiskohdat, ja tarkista että kansiot ja avr-gcc-kutsu on oikein.
 Bonuksena mukana on send-vaihtoehto, eli `make send` kääntää ja lähettää käännetyn koodin sirulle.
 Jos koodi toimii, skoopilta kun katsoo kahden vierekkäisen pinnin signaalia niin pitäisi näyttää suunnilleen tältä
